@@ -1,0 +1,13 @@
+name: TestRener hook example
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  deploy-app:
+    runs-on: unutu-latest
+
+
+    steps:
+      - run: curl ${{secrets.RENDER_DEPLOY_HOOK}}
+      
